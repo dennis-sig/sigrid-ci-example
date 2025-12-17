@@ -1,0 +1,9 @@
+languages:
+  - Java
+
+dependencychecker:
+  blocklist: ["NONE"]
+
+thirdpartyfindings:
+  enabled: true
+  
