@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@osh-vulnerability-details
         with:
           customer: sigdelivery
           system: github-sigrid-ci-example
