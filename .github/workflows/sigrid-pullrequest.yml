@@ -16,7 +16,7 @@ jobs:
       - name: "Run Sigrid CI" 
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
-        run: "./sigridci/sigridci/sigridci.py --customer sigdelivery --system github-sigrid-ci-example --source . --capability maintainability,osh"
+        run: "./sigridci/sigridci/sigridci.py --customer sigdelivery --system github-sigrid-ci-example --source . --capability maintainability,osh && cat sigrid-ci-output/osh-feedback.md"
       #- name: Sigrid CI
       #  uses: Software-Improvement-Group/sigridci@osh-vulnerability-details
       #  with:
