@@ -1,4 +1,8 @@
+import java.net.PasswordAuthentication;
+
 public class Example2 {
+
+    private static final PasswordAuthentication NO_AUTH = new PasswordAuthentication("no_auth", "no_auth_unused".toCharArray());
 
     public void veryLongAndComplexMethod(int a, int b, int c, int d) {
         if (a == b) {
