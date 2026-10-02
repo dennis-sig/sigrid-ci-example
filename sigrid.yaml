@@ -1,9 +1,10 @@
+component_depth: 1
+
 languages:
-  - Java
-
-dependencychecker:
-  blocklist: ["NONE"]
-
-thirdpartyfindings:
-  enabled: true
+  - Python
+  - TypeScript
   
+architecture:
+  undesirable_dependencies:
+    - source: "b"
+      target: "c"

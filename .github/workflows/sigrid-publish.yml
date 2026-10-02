@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@consolidated-feedback
         with:
           customer: sigdelivery
-          system: github-sigrid-ci-example
+          system: sigrid-ci-example-dennis
           publishonly: true
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"

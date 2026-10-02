@@ -8,20 +8,14 @@ jobs:
       pull-requests: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@main
+        uses: Software-Improvement-Group/sigridci@consolidated-feedback
         with:
           customer: sigdelivery
-          system: github-sigrid-ci-example
-          capability: maintainability,osh
+          system: sigrid-ci-example-dennis
+          capability: maintainability,osh,security,architecture
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
-      - name: "Sigrid pull request feedback"
-        uses: mshick/add-pr-comment@v2
-        if: always()
-        with:
-          message-id: sigrid
-          message-path: sigrid-ci-output/*feedback.md
