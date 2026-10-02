@@ -19,3 +19,4 @@ jobs:
           capability: maintainability,osh,security,architecture
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
+          SIGRIDCI_GITHUB_COMMENT_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
