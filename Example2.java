@@ -3,6 +3,14 @@ import java.net.PasswordAuthentication;
 public class Example2 {
 
     private static final PasswordAuthentication NO_AUTH = new PasswordAuthentication("no_auth", "no_auth_unused".toCharArray());
+    
+    public static ResultSet executeCsvQuery(Connection csv, String csvTableName) throws SQLException {
+        ResultSet expected = csv.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
+            .executeQuery("SELECT * FROM " + csvTableName);
+        // trigger data loading for type inference
+        expected.beforeFirst();
+        return expected;
+    }
 
     public void veryLongAndComplexMethod(int a, int b, int c, int d) {
         if (a == b) {
