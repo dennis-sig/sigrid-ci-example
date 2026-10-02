@@ -408,4 +408,5 @@ public class Example2 {
             default : throw new AssertionError(e);
         } 
     }
+    
 }
